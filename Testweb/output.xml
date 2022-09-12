@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220911 19:11:15.049" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Teste" source="D:\CursoUdemy\Testweb\amazon_teste.robot">
+<test id="s1-t1" name="Caso de teste 1 - Acesso ao menu de &quot;Eletrônicos&quot;" line="9">
+<kw name="Abrir o navegador" library="Amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220911 19:11:15.211" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<status status="PASS" starttime="20220911 19:11:15.210" endtime="20220911 19:11:16.344"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220911 19:11:16.344" endtime="20220911 19:11:16.470"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:15.210" endtime="20220911 19:11:16.470"/>
+</kw>
+<kw name="Acessar o home page do site Amazon.com.br" library="Amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220911 19:11:16.471" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220911 19:11:16.471" endtime="20220911 19:11:28.552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${Eletronicos}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220911 19:11:28.552" endtime="20220911 19:11:28.589"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:16.471" endtime="20220911 19:11:28.589"/>
+</kw>
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" library="Amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Eletronicos}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220911 19:11:28.590" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20220911 19:11:28.590" endtime="20220911 19:11:33.222"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:28.589" endtime="20220911 19:11:33.222"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="Amazon_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=Eletrônicos e Tecnologia</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220911 19:11:33.223" endtime="20220911 19:11:33.275"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${Header_el}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220911 19:11:33.275" endtime="20220911 19:11:33.330"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:33.222" endtime="20220911 19:11:33.330"/>
+</kw>
+<kw name="Verificar se o titulo da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="Amazon_resources" sourcename="Verificar se o titulo da página fica &quot;${titulo}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${titulo}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220911 19:11:33.358" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<status status="PASS" starttime="20220911 19:11:33.331" endtime="20220911 19:11:33.358"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:33.331" endtime="20220911 19:11:33.358"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;computadores e Informática&quot;" library="Amazon_resources">
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>locator=//img[@src='https://images-na.ssl-images-amazon.com/images/G/32/BR-hq/2021/img/Consumer_Electronics/Storefronts/Electronics/956.Storefront_categoria_computadores_icons_240x270.jpg']</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20220911 19:11:33.402" level="INFO">Current page contains image '//img[@src='https://images-na.ssl-images-amazon.com/images/G/32/BR-hq/2021/img/Consumer_Electronics/Storefronts/Electronics/956.Storefront_categoria_computadores_icons_240x270.jpg']'.</msg>
+<status status="PASS" starttime="20220911 19:11:33.359" endtime="20220911 19:11:33.402"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:33.358" endtime="20220911 19:11:33.402"/>
+</kw>
+<kw name="Fechar o navegador" library="Amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220911 19:11:33.403" endtime="20220911 19:11:35.548"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:33.402" endtime="20220911 19:11:35.549"/>
+</kw>
+<status status="PASS" starttime="20220911 19:11:15.209" endtime="20220911 19:11:35.550"/>
+</test>
+<doc>Essa suite testa o site da Amazon</doc>
+<status status="PASS" starttime="20220911 19:11:15.050" endtime="20220911 19:11:35.553"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Teste">Amazon Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
